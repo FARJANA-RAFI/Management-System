@@ -1,0 +1,29 @@
+
+<?php $__env->startSection('content'); ?>
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="text-center">
+                    <h2 class="mt-5 text-center mb-4 text-dark font-weight-bold">Add New Session</h2>
+                </div>
+                <form action="<?php echo e(URL::to('create_session')); ?>" method="post">
+                    <?php echo e(csrf_field()); ?>
+
+                    <div class="form-group">
+                        <label>Session</label>
+                        <input type="text" class="form-control" name="session">
+                    </div>
+
+                    <div class="form-group">
+                        <a class="btn btn-success" href="<?php echo e(URL::to('session')); ?>">Cancel</a>
+                        <button type="submit" class="btn btn-primary" name="submit">Add Session</button>
+                    </div>
+                </form>
+
+            </div><!-- col-md-10 -->
+        </div><!-- row -->
+    </div><!-- Container -->
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\sd_project\sd_final_rjns\resources\views/admin/add_session.blade.php ENDPATH**/ ?>
